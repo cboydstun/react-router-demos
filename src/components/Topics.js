@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link,
@@ -15,7 +14,7 @@ export default function Topics() {
     <div>
       <h2>Topics</h2>
 
-      <ul>
+      <ul className="nav-topics">
         <li>
           <Link to={`${match.url}/components`}>Components</Link>
         </li>

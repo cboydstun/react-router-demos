@@ -12,7 +12,7 @@ export default function DemoRouter() {
   return (
     <Router>
       <div>
-        <nav>
+        <nav className="nav">
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -31,12 +31,13 @@ export default function DemoRouter() {
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
+        <div className="container">
         <Switch>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/users">
-            <Users />
+            <Users name={"Chris"} />
           </Route>
           <Route path="/topics">
             <Topics />
@@ -45,19 +46,37 @@ export default function DemoRouter() {
             <Home />
           </Route>
         </Switch>
+        </div>
       </div>
     </Router>
   );
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return(
+      <div>
+        <h2>Home</h2>
+        <p>This is a render of the home page.</p>
+      </div>
+  );
 }
 
 function About() {
-  return <h2>About</h2>;
+  return (
+      <div>
+        <h2>About</h2>
+        <p>This is a render of the about page.</p>
+      </div>
+  );
 }
 
-function Users() {
-  return <h2>Users</h2>;
+function Users(props) {
+  return (
+      <div>
+        <h2>Users</h2>
+        <p>This is a render of the user page.</p>
+        <br />
+        <p>Hello my name is {props.name}</p>
+      </div>
+  );
 }

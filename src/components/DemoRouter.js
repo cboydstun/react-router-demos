@@ -6,6 +6,8 @@ import {
   Link
 } from "react-router-dom";
 
+import Topics from './Topics'
+
 export default function DemoRouter() {
   return (
     <Router>
@@ -21,6 +23,9 @@ export default function DemoRouter() {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <li>
+              <Link to="/topics">Topics</Link>
+            </li>
           </ul>
         </nav>
 
@@ -32,6 +37,9 @@ export default function DemoRouter() {
           </Route>
           <Route path="/users">
             <Users />
+          </Route>
+          <Route path="/topics">
+            <Topics />
           </Route>
           <Route path="/">
             <Home />

@@ -1,9 +1,11 @@
 import React from 'react'
 
+import DemoRouter from './components/DemoRouter'
+
 export default function App() {
     return (
         <div>
-            hey from react
+            <DemoRouter />
         </div>
     )
 }
